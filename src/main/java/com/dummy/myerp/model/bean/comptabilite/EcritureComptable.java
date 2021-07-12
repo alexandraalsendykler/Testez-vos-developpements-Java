@@ -90,6 +90,8 @@ public class EcritureComptable {
 	 * @return {@link BigDecimal}, {@link BigDecimal#ZERO} si aucun montant au débit
 	 */
 	// TODO à tester
+	// test écrit
+
 	public BigDecimal getTotalDebit() {
 		BigDecimal vRetour = BigDecimal.ZERO;
 		for (LigneEcritureComptable vLigneEcritureComptable : listLigneEcriture) {
@@ -106,6 +108,8 @@ public class EcritureComptable {
 	 * @return {@link BigDecimal}, {@link BigDecimal#ZERO} si aucun montant au
 	 *         crédit
 	 */
+	// test écrit
+
 	public BigDecimal getTotalCredit() {
 		BigDecimal vRetour = BigDecimal.ZERO;
 		for (LigneEcritureComptable vLigneEcritureComptable : listLigneEcriture) {
@@ -121,6 +125,9 @@ public class EcritureComptable {
 	 * 
 	 * @return boolean
 	 */
+
+	// test écrit
+
 	public boolean isEquilibree() {
 		int vRetour = this.getTotalDebit().compareTo(getTotalCredit());
 		if (vRetour == 0)
@@ -148,4 +155,3 @@ public class EcritureComptable {
 		return false;
 	}
 }
-
