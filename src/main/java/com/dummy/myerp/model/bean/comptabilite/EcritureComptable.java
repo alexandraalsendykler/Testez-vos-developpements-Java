@@ -142,6 +142,10 @@ public class EcritureComptable {
 				.append(StringUtils.join(listLigneEcriture, "\n")).append("\n]").append("}");
 		return vStB.toString();
 	}
+
+	public boolean contains(BigDecimal zero) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
 
-// test de git
