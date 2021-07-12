@@ -143,3 +143,5 @@ public class EcritureComptable {
 		return vStB.toString();
 	}
 }
+
+// test de git
