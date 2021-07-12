@@ -89,7 +89,7 @@ public class EcritureComptable {
 	 *
 	 * @return {@link BigDecimal}, {@link BigDecimal#ZERO} si aucun montant au débit
 	 */
-	// TODO à tester
+	// TODO 
 	// test écrit
 
 	public BigDecimal getTotalDebit() {
