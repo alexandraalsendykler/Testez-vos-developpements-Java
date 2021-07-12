@@ -150,8 +150,4 @@ public class EcritureComptable {
 		return vStB.toString();
 	}
 
-	public boolean contains(BigDecimal zero) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 }
