@@ -45,11 +45,13 @@ public class EcritureComptableTest {
 		vEcriture = new EcritureComptable();
 
 		vEcriture.setLibelle("non null");
-		vEcriture.getListLigneEcriture().add(this.createLigne(1, "200.50", null));
-		vEcriture.getListLigneEcriture().add(this.createLigne(1, "100.50", "33"));
+		vEcriture.getListLigneEcriture().add(this.createLigne(1, null, "33"));
 		vEcriture.getListLigneEcriture().add(this.createLigne(2, null, "301"));
-		vEcriture.getListLigneEcriture().add(this.createLigne(2, "40", "7"));
-		Assert.assertNotNull(vEcriture.toString(), vEcriture.getTotalCredit());
+		vEcriture.getListLigneEcriture().add(this.createLigne(2, null, "7"));
+
+		BigDecimal expected = new BigDecimal(341);
+
+		Assert.assertEquals(vEcriture.toString(), expected, vEcriture.getTotalCredit());
 
 	}
 
@@ -60,10 +62,12 @@ public class EcritureComptableTest {
 
 		vEcriture.setLibelle("non null");
 		vEcriture.getListLigneEcriture().add(this.createLigne(1, "200.50", null));
-		vEcriture.getListLigneEcriture().add(this.createLigne(1, "100.50", "33"));
-		vEcriture.getListLigneEcriture().add(this.createLigne(2, null, "301"));
-		vEcriture.getListLigneEcriture().add(this.createLigne(2, "40", "7"));
-		Assert.assertNotNull(vEcriture.toString(), vEcriture.getTotalDebit());
+		vEcriture.getListLigneEcriture().add(this.createLigne(1, "100.50", null));
+		vEcriture.getListLigneEcriture().add(this.createLigne(2, "40", null));
+		
+		BigDecimal expected = new BigDecimal("341.00");
+		
+		Assert.assertEquals(vEcriture.toString(), expected, vEcriture.getTotalDebit());
 
 	}
 
